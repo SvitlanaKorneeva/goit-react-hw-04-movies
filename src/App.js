@@ -23,13 +23,13 @@ const App = () => (
     <ul>
       <li><NavLink to="/" >Home</NavLink></li>
       <li><NavLink to="/movies" >Movie</NavLink></li>
-      <li><NavLink to="/moviesdetail" >MovieDetail</NavLink></li>
+      <li><NavLink to="/movies/:movieId" >MovieDetail</NavLink></li>
     </ul>
 
     <Switch>
     <Route exact path="/" component={HomePage} />
-    <Route path="/movies" component={MoviePage} />
-    <Route path="/moviesdetail" component={MovieDetailsPage} />
+    <Route exact path="/movies" component={MoviePage} />
+    <Route path="/movies/:moviesId" component={MovieDetailsPage} />
     <Route component={NotFoundView} />
     </Switch>
     
